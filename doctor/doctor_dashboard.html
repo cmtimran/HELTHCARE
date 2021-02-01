@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Healthcare | Doctor Dashboard </title>
+
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" id="css-main" href="assets/css/halthcare.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed">
+        <nav id="sidebar" aria-label="Main Navigation">
+            <!-- Side Header -->
+            <div class="content-header bg-white-5">
+                <!-- Logo -->
+                <a class="font-w600 text-dual" href="index.html">
+                    <i class="fa fa-circle-notch text-primary"></i>
+                    <span class="smini-hide">
+                        <span class="font-w700 font-size-h5">Healthcare</span>
+                    </span>
+                </a>
+                <!-- END Logo -->
+            </div>
+            <!-- END Side Header -->
+
+            <!-- Side Navigation -->
+            <div class="content-side content-side-full">
+                <ul class="nav-main">
+                    <li class="nav-main-item">
+                        <a class="nav-main-link active" href="doctor_dashboard.html">
+                            <i class="nav-main-link-icon si si-speedometer"></i>
+                            <span class="nav-main-link-name">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="doctor_cases.html">
+                            <i class='nav-main-link-icon fas fa-stethoscope'></i>
+                            <span class="nav-main-link-name">Cases</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="doctor_pharmacy.html">
+                            <i class='nav-main-link-icon fas fa-clinic-medical'></i>
+                            <span class="nav-main-link-name">Pharmacy</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="doctor_patients.html">
+                            <i class='nav-main-link-icon fas fa-wheelchair'></i>
+                            <span class="nav-main-link-name">Patients</span>
+                        </a>
+                    </li>
+                    <hr>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="help.html">
+                            <i class="nav-main-link-icon si si-info"></i>
+                            <span class="nav-main-link-name">Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- END Side Navigation -->
+        </nav>
+        <!-- END Sidebar -->
+
+        <!-- Header -->
+        <header id="page-header">
+            <!-- Header Content -->
+            <div class="content-header">
+                <!-- Left Section -->
+                <div class="d-flex align-items-center">
+                    <!-- Toggle Sidebar -->
+                    <button type="button" class="btn btn-sm btn-dual mr-2 d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                    <!-- END Toggle Sidebar -->
+
+                    <!-- Toggle Mini Sidebar -->
+                    <button type="button" class="btn btn-sm btn-dual mr-2 d-none d-lg-inline-block" data-toggle="layout" data-action="sidebar_mini_toggle">
+                        <i class="fa fa-fw fa-ellipsis-v"></i>
+                    </button>
+                    <!-- END Toggle Mini Sidebar -->
+                    <button type="button" class="btn btn-sm btn-dual d-sm-none" data-toggle="layout" data-action="header_search_on">
+                        <i class="si si-magnifier"></i>
+                    </button>
+                    <!-- END Open Search Section -->
+                    <form class="d-none d-sm-inline-block" action="be_pages_generic_search.html" method="POST">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control form-control-alt" placeholder="Search.." id="page-header-search-input2" name="page-header-search-input2">
+                            <div class="input-group-append">
+                                <span class="input-group-text bg-body border-0">
+                                    <i class="si si-magnifier"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END Search Form -->
+                </div>
+                <!-- END Left Section -->
+
+                <!-- Right Section -->
+                <div class="d-flex align-items-center">
+                    <!-- User Dropdown -->
+                    <div class="dropdown d-inline-block ml-2">
+                        <button type="button" class="btn btn-sm btn-dual" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded" src="assets/media/photos/xs/avatar1.jpg" alt="Header Avatar" style="width: 18px;">
+                            <span class="d-none d-sm-inline-block ml-1">Admin</span>
+                            <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-user-dropdown">
+                            <div class="p-3 text-center bg-primary">
+                                <img class="img-avatar img-avatar48 img-avatar-thumb" src="assets/media/photos/xs/avatar1.jpg" alt="">
+                            </div>
+                            <div class="p-2">
+                                <h5 class="dropdown-header text-uppercase">User Options</h5>
+                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Profile</span>
+                                    <span>
+                                        <i class="si si-user ml-1"></i>
+                                    </span>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                                    <span>Settings</span>
+                                    <i class="si si-settings"></i>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="login.html">
+                                    <span>Log Out</span>
+                                    <i class="si si-logout ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END User Dropdown -->
+
+                    <!-- Notifications Dropdown -->
+                    <div class="dropdown d-inline-block ml-2">
+                        <button type="button" class="btn btn-sm btn-dual" id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="si si-bell"></i>
+                            <span class="badge badge-primary badge-pill">6</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-2 bg-primary text-center">
+                                <h5 class="dropdown-header text-uppercase text-white">Notifications</h5>
+                            </div>
+                            <ul class="nav-items mb-0">
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-check-circle text-success"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">You have a new follower</div>
+                                            <small class="text-muted">15 min ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-plus-circle text-info"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">1 new sale, keep it up</div>
+                                            <small class="text-muted">22 min ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-times-circle text-danger"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">Update failed, restart server</div>
+                                            <small class="text-muted">26 min ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-plus-circle text-info"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">2 new sales, keep it up</div>
+                                            <small class="text-muted">33 min ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-user-plus text-success"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">You have a new subscriber</div>
+                                            <small class="text-muted">41 min ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-check-circle text-success"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">You have a new follower</div>
+                                            <small class="text-muted">42 min ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="p-2 border-top">
+                                <a class="btn btn-sm btn-light btn-block text-center" href="javascript:void(0)">
+                                    <i class="fa fa-fw fa-arrow-down mr-1"></i> Load More..
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Notifications Dropdown -->
+                </div>
+                <!-- END Right Section -->
+            </div>
+            <!-- END Header Content -->
+
+            <!-- Header Search -->
+            <div id="page-header-search" class="overlay-header bg-white">
+                <div class="content-header">
+                    <form class="w-100" action="be_pages_generic_search.html" method="POST">
+                        <div class="input-group input-group-sm">
+                            <div class="input-group-prepend">
+                                <button type="button" class="btn btn-danger" data-toggle="layout" data-action="header_search_off">
+                                    <i class="fa fa-fw fa-times-circle"></i>
+                                </button>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- END Header Search -->
+
+            <div id="page-header-loader" class="overlay-header bg-white">
+                <div class="content-header">
+                    <div class="w-100 text-center">
+                        <i class="fa fa-fw fa-circle-notch fa-spin"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- END Header Loader -->
+        </header>
+        <!-- END Header -->
+
+        <!-- Main Container -->
+        <main id="main-container">
+
+            <!-- Page Content -->
+            <div class="content content-narrow">
+                <!-- Stats -->
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
+                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
+                                    <div class="dashboard_main_tab_box_conten">
+                                        <div class="row">
+                                            <div class="col-4 pr-0">
+                                                <div class="dashboard_tab_icon color_icon_1">
+                                                    <i class="nav-main-link-icon fas fa-user-injured"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="dashboard_tab_text">
+                                                    <h5>Total Patients</h5>
+                                                    <h4 class="color_text_1">213</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
+                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
+                                    <div class="dashboard_main_tab_box_conten">
+                                        <div class="row">
+                                            <div class="col-4 pr-0">
+                                                <div class="dashboard_tab_icon color_icon_2">
+                                                    <i class='nav-main-link-icon fas fa-user-md'></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="dashboard_tab_text">
+                                                    <h5>Evaluated Patients</h5>
+                                                    <h4 class="color_text_2">213</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
+                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
+                                    <div class="dashboard_main_tab_box_conten">
+                                        <div class="row">
+                                            <div class="col-4 pr-0">
+                                                <div class="dashboard_tab_icon color_icon_3">
+                                                    <i class="nav-main-link-icon fas fa-procedures"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="dashboard_tab_text">
+                                                    <h5>Pending Patients</h5>
+                                                    <h4 class="color_text_3">213</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
+                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
+                                    <div class="dashboard_main_tab_box_conten">
+                                        <div class="row">
+                                            <div class="col-4 pr-0">
+                                                <div class="dashboard_tab_icon color_icon_4">
+                                                    <i class='nav-main-link-icon fas fa-user-md'></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="dashboard_tab_text">
+                                                    <h5>Total Doctors</h5>
+                                                    <h4 class="color_text_4">213</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
+                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
+                                    <div class="dashboard_main_tab_box_conten">
+                                        <div class="row">
+                                            <div class="col-4 pr-0">
+                                                <div class="dashboard_tab_icon color_icon_5">
+                                                    <i class="nav-main-link-icon far fa-hospital"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="dashboard_tab_text">
+                                                    <h5>Total Pharmacy</h5>
+                                                    <h4 class="color_text_5">213</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
+                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
+                                    <div class="dashboard_main_tab_box_conten">
+                                        <div class="row">
+                                            <div class="col-4 pr-0">
+                                                <div class="dashboard_tab_icon color_icon_6">
+                                                    <i class="nav-main-link-icon fas fa-user-nurse"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="dashboard_tab_text">
+                                                    <h5>Pharmacy User</h5>
+                                                    <h4 class="color_text_6">213</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dashboard_all_you_need">
+                            <p>All you need to know about Healthcare!</p>
+                            <a href="#" class="view_more_design">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Stats -->
+
+                <!-- Dashboard Charts -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="block block-rounded block-mode-loading-oneui">
+                            <div class="block-header block-header-default">
+                                <h5 class="block-title">Case</h5>
+                            </div>
+                            <div class="block-content p-0 text-center">
+                                <div class="pt-3" style="height: 400px;"><canvas class="js-chartjs-dashboard-earnings"></canvas></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Dashboard Charts -->
+
+                <!-- Customers and Latest Orders -->
+                <div class="row">
+                    <div class="col-lg-9 col-md-12">
+                        <div class="dashboard_table_area">
+                            <h5>Case Activity</h5>
+                            <table class="table m-b-0 table-bordered table-striped table-vcenter js-dataTable-full">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Patient Name</th>
+                                        <th>Date</th>
+                                        <th>Satus</th>
+                                        <th>Doctor</th>
+                                        <th>Pharmacy</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"> <span> Leslie Alexander</span></td>
+                                        <td>12:45PM, 10/10/2020</td>
+                                        <td>Evaluated</td>
+                                        <td>Dr. Jacob Jones</td>
+                                        <td>Dhaka- Avion</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="assets/media/photos/xs/avatar1.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"> <span> Leslie Alexander</span></td>
+                                        <td>12:45PM, 10/10/2020</td>
+                                        <td>Evaluated</td>
+                                        <td>Dr. Jacob Jones</td>
+                                        <td>Dhaka- Avion</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="assets/media/photos/xs/avatar4.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"> <span> Leslie Alexander</span></td>
+                                        <td>12:45PM, 10/10/2020</td>
+                                        <td>Evaluated</td>
+                                        <td>Dr. Jacob Jones</td>
+                                        <td>Dhaka- Avion</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="assets/media/photos/xs/avatar2.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"> <span> Leslie Alexander</span></td>
+                                        <td>12:45PM, 10/10/2020</td>
+                                        <td>Evaluated</td>
+                                        <td>Dr. Jacob Jones</td>
+                                        <td>Dhaka- Avion</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="assets/media/photos/xs/avatar5.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"> <span> Leslie Alexander</span></td>
+                                        <td>12:45PM, 10/10/2020</td>
+                                        <td>Evaluated</td>
+                                        <td>Dr. Jacob Jones</td>
+                                        <td>Dhaka- Avion</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                        <div class="dashboard_chat_area">
+                            <h5>Patients</h5>
+                            <hr>
+                            <canvas class="js-chartjs-donut"></canvas>
+                            <p>Total Evaluated Patients</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Customers and Latest Orders -->
+            </div>
+            <!-- END Page Content -->
+        </main>
+        <!-- END Main Container -->
+
+        <!-- Footer -->
+        <footer id="page-footer" class="bg-body-light">
+            <div class="content py-3">
+                <div class="row font-size-sm">
+                    <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-right">
+                        Crafted with <i class="fa fa-heart text-danger"></i> by <a class="font-w600" href="#" target="_blank">Healthcare</a>
+                    </div>
+                    <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-left">
+                        <a class="font-w600" href="#" target="_blank">Healthcare</a> &copy; <span data-toggle="year-copy"></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END Footer -->
+    </div>
+    <script src="assets/js/halthcare.core.min.js"></script>
+    <script src="assets/js/halthcare.app.min.js"></script>
+    <script src="assets/js/plugins/chart.js/Chart.bundle.min.js"></script>
+
+    <script src="assets/js/pages/halthcare_charts.min.js"></script>
+    <script src="assets/js/pages/halthcare_dashboard.min.js"></script>
+</body>
+
+</html>
