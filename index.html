@@ -1,38 +1,106 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Healthcare | Home</title>
+        <title>Home | HEALTHCARE</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+        <!-- END Icons -->
+        <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+        <!-- END Icons -->
 
-    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
-    <!-- END Icons -->
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+        <!-- Styles -->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 200;
+                height: 100vh;
+                margin: 0;
+            }
 
-  </head>
-  <body class="bg-white">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-md-12 p-0">
-                <div class="form_main_area">
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 84px;
+            }
+
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+        </style>
+        
+        <!-- Stylesheets -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height"> 
+
+            <div class="content">
+                <div class="title m-b-md">
+                    HEALTHCARE
+                </div>
+
+                <div class="links">
                     <a href="admin/index.html">Admin Dashboard</a> | 
                     <a href="doctor/index.html">Doctor Dashboard</a> | 
-                    <a href="patients/index.html">Patient Dashboard</a>
+                    <a href="patients/index.html">Patient Dashboard</a> 
                 </div>
-            </div> 
-        </div>
-    </div>
+                <br><br><br>
 
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-sm-12 order-sm-2 py-1 text-center">
+                    Developed <i class="fa fa-heart text-danger"></i> by <a class="font-w600" href="#" target="_blank">Elite Force</a>
+                </div> 
+              </div>
+            </div>
+          </div>
+              
+        </div>
+        
     <!-- JavaScript -->
     <script src="assets/bootstrap/jquery-3.2.1.slim.min.js"></script>
     <script src="assets/bootstrap/popper.min.js"></script>
