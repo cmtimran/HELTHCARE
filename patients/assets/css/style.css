@@ -300,7 +300,7 @@ a.delete_btn_style:focus{
     font-size: 16px;
     font-weight: 600;
     line-height: 45px;
-    padding: 20px 20px 0px;
+    padding: 20px 20px 20px;
     margin-bottom: 10px;
 }
 .case_details_history_area .table thead {
@@ -348,9 +348,7 @@ a.delete_btn_style:focus{
     padding: 20px 0px 25px;
 
 }
-.case_details_area_bottom {
-    padding-bottom: 162px;
-}
+ 
 /*Dashboard Style*/
 .dashboard_all_you_need {
     background-color: #6270DD;
