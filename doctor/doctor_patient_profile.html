@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Healthcare | Doctor-Patient</title>
+    <title>Healthcare | Doctor-Patient Profile </title>
 
     <!-- Icons -->
     <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
@@ -42,21 +42,33 @@
             <div class="content-side content-side-full">
                 <ul class="nav-main">
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="index.html">
+                        <a class="nav-main-link active" href="index.html">
                             <i class="nav-main-link-icon si si-speedometer"></i>
                             <span class="nav-main-link-name">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="doctor_cases.html">
+                        <a class="nav-main-link" href="admin_cases.html">
                             <i class='nav-main-link-icon fas fa-stethoscope'></i>
                             <span class="nav-main-link-name">Cases</span>
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link active" href="doctor_patients.html">
+                        <a class="nav-main-link" href="admin_doctors.html">
+                            <i class='nav-main-link-icon fas fa-user-md'></i>
+                            <span class="nav-main-link-name">Doctors</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link active" href="admin_patients.html">
                             <i class='nav-main-link-icon fas fa-wheelchair'></i>
                             <span class="nav-main-link-name">Patients</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="404.html">
+                            <i class="nav-main-link-icon si si-credit-card"></i>
+                            <span class="nav-main-link-name">Payment</span>
                         </a>
                     </li>
                     <hr>
@@ -268,150 +280,150 @@
 
             <!-- Page Content -->
             <div class="content content-narrow">
+                <div class="profile_back">
+                    <p><a href="#" class="back_btn"><i class="fas fa-arrow-left"></i> Back</a></p>
+                </div>
+                <div class="block-header">
+                    <h3 class="block-title">Profile</h3>
+                </div>
                 <!-- Dynamic Table Full -->
                 <div class="block">
-                    <div class="block-header">
-                        <h3 class="block-title">Patients</h3>
-                    </div>
                     <div class="block-content block-content-full">
-                        <table class="table m-b-0 table-bordered table-striped table-vcenter js-dataTable-full">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th>Patient Name</th>
-                                    <th>Pharmacy</th>
-                                    <th>Evaluated Date</th>
-                                    <th>Deadline</th>
-                                    <th>Diagnosis</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Leslie Alexander</span></td>
-                                    <td>Laz Pharma</td>
-                                    <td>12:45PM, 10/10/2020</td>
-                                    <td>3 time</td>
-                                    <td><a href="doctor_case_details.html" class="delete_btn_style">Unclear Picture</a></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Leslie Alexander</span></td>
-                                    <td>Laz Pharma</td>
-                                    <td>12:45PM, 10/10/2020</td>
-                                    <td>3 time</td>
-                                    <td><a href="doctor_case_details.html" class="active_btn_style">Safe</a></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Leslie Alexander</span></td>
-                                    <td>Laz Pharma</td>
-                                    <td>12:45PM, 10/10/2020</td>
-                                    <td>3 time</td>
-                                    <td><a href="doctor_case_details.html" class="delete_btn_style">Unclear Picture</a></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Leslie Alexander</span></td>
-                                    <td>Laz Pharma</td>
-                                    <td>12:45PM, 10/10/2020</td>
-                                    <td>3 time</td>
-                                    <td><a href="doctor_case_details.html" class="active_btn_style">Safe</a></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Leslie Alexander</span></td>
-                                    <td>Laz Pharma</td>
-                                    <td>12:45PM, 10/10/2020</td>
-                                    <td>3 time</td>
-                                    <td><a href="doctor_case_details.html" class="delete_btn_style">Unclear Picture</a></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Leslie Alexander</span></td>
-                                    <td>Laz Pharma</td>
-                                    <td>12:45PM, 10/10/2020</td>
-                                    <td>3 time</td>
-                                    <td><a href="doctor_case_details.html" class="active_btn_style">Safe</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="profile_left">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="image_area text-center">
+                                                <img src="assets/media/photos/xs/avatar1.jpg" alt="">
+                                                <h5>Leslie Alexander</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="address_line_area">
+                                                <ul>
+                                                    <li><span>Gender :</span> Female</li>
+                                                    <li><span>Birth Date : </span> 24/03/1996</li>
+                                                    <li><span>Phone No : </span> +880 1234 567 984</li>
+                                                    <li><span>Email : </span> youremail@gmail.com</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="address_line_area">
+                                    <ul>
+                                        <li><span>Address : </span> Mäster Samuelsgatan 36</li>
+                                        <li><span>Post Code : </span> 1236</li>
+                                        <li><span>City : </span> 4 Stockholm</li>
+                                        <li><span>Country : </span> Sweden</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dynamic Table Full -->
+                <div class="block">
+                    <div class="block-content block-content-full">
+                        <ul class="nav nav-tabs-new2">
+                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="">History</a></li>
+                        </ul>
+                        <div class="tab-content mt-3">
+                            <div class="tab-pane active">
+                                <table class="table m-b-0 table-bordered table-striped table-vcenter js-dataTable-full">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Evaluated Time</th>
+                                            <th>Added Time</th>
+                                            <th>Doctor</th>
+                                            <th>Diagnosis</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="active_btn_style">pending</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="safe_btn_style">safe</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="unclear_btn-style">Unclear Picture</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="safe_btn_style">safe</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="safe_btn_style">safe</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="safe_btn_style">safe</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="safe_btn_style">safe</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="safe_btn_style">safe</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="safe_btn_style">safe</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="safe_btn_style">safe</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="safe_btn_style">safe</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td> <a href="admin_case_details.html" class="safe_btn_style">safe</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- END Dynamic Table Full -->
             </div>
             <!-- END Page Content -->
-
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header modal_header_style">
-                            <h5 class="modal-title" id="exampleModalLabel">Add Patient</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="title_label_style">Pharmacy</label>
-                                        <label for="exampleFormControlSelect1">Pharmacy</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>write</option>
-                                            <option>write</option>
-                                            <option>write</option>
-                                            <option>write</option>
-                                            <option>write</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="title_label_style">First Name</label>
-                                        <input type="text" class="form-control input_form_style" placeholder="write">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="title_label_style">Last Name</label>
-                                        <input type="text" class="form-control input_form_style" placeholder="write">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="title_label_style">Phone No</label>
-                                        <input type="text" class="form-control input_form_style" placeholder="+880">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="title_label_style">Email</label>
-                                        <input type="email" class="form-control input_form_style" placeholder="write">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="title_label_style">Password</label>
-                                        <input type="password" class="form-control input_form_style" placeholder="password">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="title_label_style">Confirm Password</label>
-                                        <input type="password" class="form-control input_form_style" placeholder="confirm">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="title_label_style">Profile Pic</label>
-                                        <input type="file" id="myFile" name="filename" class="form-control choose_file_style">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="cancel_btn_style" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="form_add_btn_style">Add</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </main>
         <!-- END Main Container -->
 
@@ -429,7 +441,6 @@
             </div>
         </footer>
         <!-- END Footer -->
-
     </div>
     <!-- END Page Container -->
     <script src="assets/js/halthcare.core.min.js"></script>
