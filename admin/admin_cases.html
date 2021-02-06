@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Healthcare | Admin Template</title>
+    <title>Healthcare | Admin-Cases</title>
 
     <!-- Icons -->
     <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
@@ -288,11 +288,12 @@
                     <div class="block-content block-content-full">
                         <ul class="nav nav-tabs-new2">
                             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#evaluatedCase">Evaluated Case</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inprogressCase">Inprogress Case</a></li>
                             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#pendingCase">Pending Case</a></li>
                         </ul>
                         <div class="tab-content mt-3">
                             <div class="tab-pane active" id="evaluatedCase">
-                                <table class="table m-b-0 table-bordered table-striped table-vcenter js-dataTable-full">
+                                <table class="table m-b-0 table-bordered table-striped table-vcenter js-dataTable-full no-footer">
                                     <thead class="thead-light">
                                         <tr>
                                             <th>Patient Name</th> 
@@ -387,8 +388,134 @@
                                 </table>
                             </div>
 
+                            <!-- Start Inprogress Cases -->
+                            <div class="tab-pane" id="inprogressCase">
+                                <table class="table m-b-0 table-bordered table-striped table-vcenter js-dataTable-full no-footer">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Patient Name</th>
+                                            <th>Email</th> 
+                                            <th>Phone</th>
+                                            <th>Added Date</th>
+                                            <th>Assigned Doctor</th> 
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span></td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td>
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span></td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td> 
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span>
+                                    </td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td> 
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span>
+                                    </td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td> 
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span>
+                                    </td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td> 
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span>
+                                    </td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td> 
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span>
+                                    </td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td> 
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span>
+                                    </td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td> 
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span>
+                                    </td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td> 
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span>
+                                    </td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td> 
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span>
+                                    </td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td> 
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span><a href="admin_patient_profile.html">Leslie Alexander</a></span>
+                                    </td>
+                                            <td>email@mail.com</td>
+                                            <td>+880 17121 12129</td>
+                                            <td>12:45PM, 10/10/2020</td> 
+                                            <td>Dr. Jacob Jones</td>
+                                            <td><a href="admin_unevaluated_case_details.html" class="active_btn_style">View</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- End Inprogress Cases -->
+
+                            <!-- Start Pending Cases -->
                             <div class="tab-pane" id="pendingCase">
-                                <table class="table m-b-0 table-bordered table-striped table-vcenter js-dataTable-full">
+                                <table class="table m-b-0 table-bordered table-striped table-vcenter js-dataTable-full no-footer">
                                     <thead class="thead-light">
                                         <tr>
                                             <th>Patient Name</th>
@@ -496,6 +623,7 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <!-- End Pending Cases --> 
                         </div>
                     </div>
                 </div>
