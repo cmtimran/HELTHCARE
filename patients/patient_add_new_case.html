@@ -19,6 +19,130 @@
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" id="css-main" href="assets/css/halthcare.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <style type="stylesheet">
+            #formdiv {
+  text-align: center;
+}
+#file {
+  color: green;
+  padding: 5px;
+  border: 1px dashed #123456;
+  background-color: #f9ffe5;
+}
+#img {
+  width: 17px;
+  border: none;
+  height: 17px;
+  margin-left: -20px;
+  margin-bottom: 191px;
+}
+.upload {
+  width: 100%;
+  height: 30px;
+}
+.previewBox {
+  text-align: center;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  float: left;
+}
+.previewBox img {
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border: 1px solid rgb(232, 222, 189);
+}
+.delete {
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  width: 20px;
+  height:  20px;
+  border-radius: 50%;
+  background: #ccc;
+}
+        </style>
+        <script>
+             $('#add_more').click(function() {
+          "use strict";
+          $(this).before($("<div/>", {
+            id: 'filediv'
+          }).fadeIn('slow').append(
+            $("<input/>", {
+              name: 'file[]',
+              type: 'file',
+              id: 'file',
+              multiple: 'multiple',
+              accept: 'image/*'
+            })
+          ));
+        });
+
+        $('#upload').click(function(e) {
+          "use strict";
+          e.preventDefault();
+
+          if (window.filesToUpload.length === 0 || typeof window.filesToUpload === "undefined") {
+            alert("No files are selected.");
+            return false;
+          }
+
+          // Now, upload the files below...
+          // https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications#Handling_the_upload_process_for_a_file.2C_asynchronously
+        });
+
+        deletePreview = function (ele, i) {
+          "use strict";
+          try {
+            $(ele).parent().remove();
+            window.filesToUpload.splice(i, 1);
+          } catch (e) {
+            console.log(e.message);
+          }
+        }
+
+        $("#file").on('change', function() {
+          "use strict";
+
+          // create an empty array for the files to reside.
+          window.filesToUpload = [];
+
+          if (this.files.length >= 1) {
+            $("[id^=previewImg]").remove();
+            $.each(this.files, function(i, img) {
+              var reader = new FileReader(),
+                newElement = $("<div id='previewImg" + i + "' class='previewBox'><img /></div>"),
+                deleteBtn = $("<span class='delete' onClick='deletePreview(this, " + i + ")'>X</span>").prependTo(newElement),
+                preview = newElement.find("img");
+
+              reader.onloadend = function() {
+                preview.attr("src", reader.result);
+                preview.attr("alt", img.name);
+              };
+
+              try {
+                window.filesToUpload.push(document.getElementById("file").files[i]);
+              } catch (e) {
+                console.log(e.message);
+              }
+
+              if (img) {
+                reader.readAsDataURL(img);
+              } else {
+                preview.src = "";
+              }
+
+              newElement.appendTo("#filediv");
+            });
+          }
+        });
+        </script>
+
     </head>
     <body>
         <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed">
@@ -276,7 +400,7 @@
                                 <div class="block rounded">
                                     <div class="block-content block-content-full">
                                         <div class="patient_add_new_case">
-                                            <h4>Where is the skin problem located?</h4>
+                                            <h4>Describe, Where is the skin problem located?</h4>
                                             <div class="check_box_area">
                                                 <div class="row">
                                                     <div class="col-12">
@@ -290,11 +414,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="block rounded">
                                     <div class="block-content block-content-full">
                                         <div class="case_details_area_bottom">
-                                            <h5>Answered 7 seven questions</h5>
+                                            <h5>Answer the 7 seven questions: </h5>
                                             <div class="check_box_area">
                                                 <h6>1 . Lorem Ipsum is simply dummy text of the printing and?</h6>
                                                 <div class="row">
@@ -442,9 +566,51 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button type="submit" class="btn referral_needed">Add Case</button>
-                                                <button type="button" class="add_btn_style" data-toggle="modal" data-target="#exampleModal">Successfull</button>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <button type="submit" class="add_btn_style">Add Case</button>  
+                                                        </div>
+                                                        <div class="alert alert-success alert-dismissible">
+                                                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                            <strong>Successfull!</strong>
+                                                        </div> 
+                                                        <div class="alert alert-danger alert-dismissible">
+                                                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                            <strong>Other Error message!!!</strong>
+                                                        </div>  
+                                                    </div>
+                                                </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                function preview_images(){
+                                var total_file=document.getElementById("images").files.length;
+                                    for(var i=0;i<total_file;i++){
+                                        $('#image_preview').append("<div class='col-md-3'><img class='img-fluid' src='"+URL.createObjectURL(event.target.files[i])+"'></div>");
+                                    }
+                                }
+                            </script>
+
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="block rounded">
+                                    <div class="block-content block-content-full">
+                                        <div class="case_details_image_area">
+                                            <div class="row" id="image_preview"> 
+                                            </div>  
+                                            <ul>
+                                                <li><img src="assets/media/photos/no-empty.png" class="img-fluid" alt="Case Details Image"></li> 
+                                            </ul>
+                                        </div> 
+                                        <hr>
+                                        <h5>Select Some Clear Images</h5>
+                                        <div class="custom-file"> 
+                                            <input id="images" name="images[]" type="file" onchange="preview_images();" class="custom-file-input" data-show-upload="false" data-show-caption="true" multiple data-show-upload="true" multiple>
+                                            <label class="custom-file-label" for="customFile" name='submit_image' value="Upload Multiple Image"> <i class="fas fa-image"></i> Choose Multiple Image</label>
                                         </div>
                                     </div>
                                 </div>
