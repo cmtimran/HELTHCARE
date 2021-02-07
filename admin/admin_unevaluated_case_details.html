@@ -1,525 +1,459 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-        <title>Healthcare | Admin-Pending Case Details</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-        <!-- Icons -->
-        <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
-        <!-- END Icons -->
+    <title>Healthcare | Admin-Pending Case Details</title>
 
-        <!-- Page JS Plugins CSS -->
-        <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.css">
-        <link rel="stylesheet" href="assets/js/plugins/datatables/buttons-bs4/buttons.bootstrap4.min.css">
+    <!-- Icons -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <!-- END Icons -->
 
-        <!-- Fonts and OneUI framework -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" id="css-main" href="assets/css/halthcare.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed">
-            <nav id="sidebar" aria-label="Main Navigation">
-                <!-- Side Header -->
-                <div class="content-header bg-white-5">
-                    <!-- Logo -->
-                    <a class="font-w600 text-dual" href="index.html">
-                        <i class="fa fa-circle-notch text-primary"></i>
-                        <span class="smini-hide">
-                            <span class="font-w700 font-size-h5">Healthcare</span>
-                        </span>
-                    </a>
-                    <!-- END Logo -->
+    <!-- Page JS Plugins CSS -->
+    <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="assets/js/plugins/datatables/buttons-bs4/buttons.bootstrap4.min.css">
+
+    <!-- Fonts and OneUI framework -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" id="css-main" href="assets/css/halthcare.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed">
+        <nav id="sidebar" aria-label="Main Navigation">
+            <!-- Side Header -->
+            <div class="content-header bg-white-5">
+                <!-- Logo -->
+                <a class="font-w600 text-dual" href="index.html">
+                    <i class="fa fa-circle-notch text-primary"></i>
+                    <span class="smini-hide">
+                        <span class="font-w700 font-size-h5">Healthcare</span>
+                    </span>
+                </a>
+                <!-- END Logo -->
+            </div>
+            <!-- END Side Header -->
+
+            <!-- Side Navigation -->
+            <div class="content-side content-side-full">
+                <ul class="nav-main">
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="index.html">
+                            <i class="nav-main-link-icon si si-speedometer"></i>
+                            <span class="nav-main-link-name">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link active" href="admin_cases.html">
+                            <i class='nav-main-link-icon fas fa-stethoscope'></i>
+                            <span class="nav-main-link-name">Cases</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="admin_doctors.html">
+                            <i class='nav-main-link-icon fas fa-user-md'></i>
+                            <span class="nav-main-link-name">Doctors</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="admin_patients.html">
+                            <i class='nav-main-link-icon fas fa-wheelchair'></i>
+                            <span class="nav-main-link-name">Patients</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="404.html">
+                            <i class="nav-main-link-icon si si-credit-card"></i>
+                            <span class="nav-main-link-name">Payment</span>
+                        </a>
+                    </li>
+                    <hr>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="help.html">
+                            <i class="nav-main-link-icon si si-info"></i>
+                            <span class="nav-main-link-name">Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- END Side Navigation -->
+        </nav>
+        <!-- END Sidebar -->
+
+        <!-- Header -->
+        <header id="page-header">
+            <!-- Header Content -->
+            <div class="content-header">
+                <!-- Left Section -->
+                <div class="d-flex align-items-center">
+                    <!-- Toggle Sidebar -->
+                    <button type="button" class="btn btn-sm btn-dual mr-2 d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                    <!-- END Toggle Sidebar -->
+
+                    <!-- Toggle Mini Sidebar -->
+                    <button type="button" class="btn btn-sm btn-dual mr-2 d-none d-lg-inline-block" data-toggle="layout" data-action="sidebar_mini_toggle">
+                        <i class="fa fa-fw fa-ellipsis-v"></i>
+                    </button>
+                    <!-- END Toggle Mini Sidebar -->
+
+                    <button type="button" class="btn btn-sm btn-dual d-sm-none" data-toggle="layout" data-action="header_search_on">
+                        <i class="si si-magnifier"></i>
+                    </button>
+                    <!-- END Open Search Section -->
+
+                    <!-- Search Form (visible on larger screens) -->
+                    <form class="d-none d-sm-inline-block" action="be_pages_generic_search.html" method="POST">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control form-control-alt" placeholder="Search.." id="page-header-search-input2" name="page-header-search-input2">
+                            <div class="input-group-append">
+                                <span class="input-group-text bg-body border-0">
+                                    <i class="si si-magnifier"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END Search Form -->
                 </div>
-                <!-- END Side Header -->
+                <!-- END Left Section -->
 
-                <!-- Side Navigation -->
-                <div class="content-side content-side-full"> 
-                    <ul class="nav-main">
-                        <li class="nav-main-item">
-                            <a class="nav-main-link" href="index.html">
-                                <i class="nav-main-link-icon si si-speedometer"></i>
-                                <span class="nav-main-link-name">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link active" href="admin_cases.html">
-                                <i class='nav-main-link-icon fas fa-stethoscope'></i>
-                                <span class="nav-main-link-name">Cases</span>
-                            </a>
-                        </li> 
-                        <li class="nav-main-item">
-                            <a class="nav-main-link" href="admin_doctors.html">
-                                <i class='nav-main-link-icon fas fa-user-md'></i>
-                                <span class="nav-main-link-name">Doctors</span>
-                            </a>
-                        </li> 
-                        <li class="nav-main-item">
-                            <a class="nav-main-link" href="admin_patients.html">
-                                <i class='nav-main-link-icon fas fa-wheelchair'></i>
-                                <span class="nav-main-link-name">Patients</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link" href="404.html">
-                                <i class="nav-main-link-icon si si-credit-card"></i>
-                                <span class="nav-main-link-name">Payment</span>
-                            </a>
-                        </li>
-                        <hr>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link" href="help.html">
-                                <i class="nav-main-link-icon si si-info"></i>
-                                <span class="nav-main-link-name">Help</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- END Side Navigation -->
-            </nav>
-            <!-- END Sidebar -->
-
-            <!-- Header -->
-            <header id="page-header">
-                <!-- Header Content -->
-                <div class="content-header">
-                    <!-- Left Section -->
-                    <div class="d-flex align-items-center">
-                        <!-- Toggle Sidebar -->
-                        <button type="button" class="btn btn-sm btn-dual mr-2 d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
-                            <i class="fa fa-fw fa-bars"></i>
+                <!-- Right Section -->
+                <div class="d-flex align-items-center">
+                    <!-- User Dropdown -->
+                    <div class="dropdown d-inline-block ml-2">
+                        <button type="button" class="btn btn-sm btn-dual" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded" src="assets/media/photos/xs/avatar1.jpg" alt="Header Avatar" style="width: 18px;">
+                            <span class="d-none d-sm-inline-block ml-1">Admin</span>
+                            <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block"></i>
                         </button>
-                        <!-- END Toggle Sidebar -->
-
-                        <!-- Toggle Mini Sidebar -->
-                        <button type="button" class="btn btn-sm btn-dual mr-2 d-none d-lg-inline-block" data-toggle="layout" data-action="sidebar_mini_toggle">
-                            <i class="fa fa-fw fa-ellipsis-v"></i>
-                        </button>
-                        <!-- END Toggle Mini Sidebar -->
-
-                        <button type="button" class="btn btn-sm btn-dual d-sm-none" data-toggle="layout" data-action="header_search_on">
-                            <i class="si si-magnifier"></i>
-                        </button>
-                        <!-- END Open Search Section -->
-
-                        <!-- Search Form (visible on larger screens) -->
-                        <form class="d-none d-sm-inline-block" action="be_pages_generic_search.html" method="POST">
-                            <div class="input-group input-group-sm">
-                                <input type="text" class="form-control form-control-alt" placeholder="Search.." id="page-header-search-input2" name="page-header-search-input2">
-                                <div class="input-group-append">
-                                    <span class="input-group-text bg-body border-0">
-                                        <i class="si si-magnifier"></i>
+                        <div class="dropdown-menu dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-user-dropdown">
+                            <div class="p-3 text-center bg-primary">
+                                <img class="img-avatar img-avatar48 img-avatar-thumb" src="assets/media/photos/xs/avatar1.jpg" alt="">
+                            </div>
+                            <div class="p-2">
+                                <h5 class="dropdown-header text-uppercase">User Options</h5>
+                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Profile</span>
+                                    <span>
+                                        <i class="si si-user ml-1"></i>
                                     </span>
-                                </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                                    <span>Settings</span>
+                                    <i class="si si-settings"></i>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="login.html">
+                                    <span>Log Out</span>
+                                    <i class="si si-logout ml-1"></i>
+                                </a>
                             </div>
-                        </form>
-                        <!-- END Search Form -->
+                        </div>
                     </div>
-                    <!-- END Left Section -->
+                    <!-- END User Dropdown -->
 
-                    <!-- Right Section -->
-                    <div class="d-flex align-items-center">
-                        <!-- User Dropdown -->
-                        <div class="dropdown d-inline-block ml-2">
-                            <button type="button" class="btn btn-sm btn-dual" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded" src="assets/media/photos/xs/avatar1.jpg" alt="Header Avatar" style="width: 18px;">
-                                <span class="d-none d-sm-inline-block ml-1">Admin</span>
-                                <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-user-dropdown">
-                                <div class="p-3 text-center bg-primary">
-                                    <img class="img-avatar img-avatar48 img-avatar-thumb" src="assets/media/photos/xs/avatar1.jpg" alt="">
-                                </div>
-                                <div class="p-2">
-                                    <h5 class="dropdown-header text-uppercase">User Options</h5>
-                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                        <span>Profile</span>
-                                        <span>
-                                            <i class="si si-user ml-1"></i>
-                                        </span>
+                    <!-- Notifications Dropdown -->
+                    <div class="dropdown d-inline-block ml-2">
+                        <button type="button" class="btn btn-sm btn-dual" id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="si si-bell"></i>
+                            <span class="badge badge-primary badge-pill">6</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-2 bg-primary text-center">
+                                <h5 class="dropdown-header text-uppercase text-white">Notifications</h5>
+                            </div>
+                            <ul class="nav-items mb-0">
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-check-circle text-success"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">You have a new follower</div>
+                                            <small class="text-muted">15 min ago</small>
+                                        </div>
                                     </a>
-                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                                        <span>Settings</span>
-                                        <i class="si si-settings"></i>
+                                </li>
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-plus-circle text-info"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">1 new sale, keep it up</div>
+                                            <small class="text-muted">22 min ago</small>
+                                        </div>
                                     </a>
-                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="login.html">
-                                        <span>Log Out</span>
-                                        <i class="si si-logout ml-1"></i>
+                                </li>
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-times-circle text-danger"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">Update failed, restart server</div>
+                                            <small class="text-muted">26 min ago</small>
+                                        </div>
                                     </a>
+                                </li>
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-plus-circle text-info"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">2 new sales, keep it up</div>
+                                            <small class="text-muted">33 min ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-user-plus text-success"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">You have a new subscriber</div>
+                                            <small class="text-muted">41 min ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-dark media py-2" href="javascript:void(0)">
+                                        <div class="mr-2 ml-3">
+                                            <i class="fa fa-fw fa-check-circle text-success"></i>
+                                        </div>
+                                        <div class="media-body pr-2">
+                                            <div class="font-w600">You have a new follower</div>
+                                            <small class="text-muted">42 min ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="p-2 border-top">
+                                <a class="btn btn-sm btn-light btn-block text-center" href="javascript:void(0)">
+                                    <i class="fa fa-fw fa-arrow-down mr-1"></i> Load More..
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Notifications Dropdown -->
+                </div>
+                <!-- END Right Section -->
+            </div>
+            <!-- END Header Content -->
+
+            <!-- Header Search -->
+            <div id="page-header-search" class="overlay-header bg-white">
+                <div class="content-header">
+                    <form class="w-100" action="be_pages_generic_search.html" method="POST">
+                        <div class="input-group input-group-sm">
+                            <div class="input-group-prepend">
+                                <button type="button" class="btn btn-danger" data-toggle="layout" data-action="header_search_off">
+                                    <i class="fa fa-fw fa-times-circle"></i>
+                                </button>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- END Header Search -->
+
+            <div id="page-header-loader" class="overlay-header bg-white">
+                <div class="content-header">
+                    <div class="w-100 text-center">
+                        <i class="fa fa-fw fa-circle-notch fa-spin"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- END Header Loader -->
+        </header>
+        <!-- END Header -->
+
+        <!-- Main Container -->
+        <main id="main-container">
+
+            <!-- Page Content -->
+            <div class="content content-narrow">
+                <div class="profile_back">
+                    <p><a href="doctor_cases.html" class="back_btn"><i class="fas fa-arrow-left"></i> Back</a></p>
+                </div>
+                <div class="block-header">
+                    <h3 class="block-title">Case Details</h3>
+                </div>
+                <!-- Dynamic Table Full -->
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="block rounded">
+                            <div class="block-content block-content-full">
+                                <div class="case_details_area">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="image_area text-center">
+                                                <img src="assets/media/photos/xs/avatar1.jpg" alt="">
+                                                <h5>Leslie Alexander</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="address_line_area case_details_style">
+                                                <ul>
+                                                    <li><span>Gender :</span>Female</li>
+                                                    <li><span>Age : </span>23</li>
+                                                    <li><span>Total Cases : </span>4 </li>
+                                                    <li><span>Added Time : </span>12:45PM, 10/10/2020</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- END User Dropdown -->
-
-                        <!-- Notifications Dropdown -->
-                        <div class="dropdown d-inline-block ml-2">
-                            <button type="button" class="btn btn-sm btn-dual" id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="si si-bell"></i>
-                                <span class="badge badge-primary badge-pill">6</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-notifications-dropdown">
-                                <div class="p-2 bg-primary text-center">
-                                    <h5 class="dropdown-header text-uppercase text-white">Notifications</h5>
-                                </div>
-                                <ul class="nav-items mb-0">
-                                    <li>
-                                        <a class="text-dark media py-2" href="javascript:void(0)">
-                                            <div class="mr-2 ml-3">
-                                                <i class="fa fa-fw fa-check-circle text-success"></i>
-                                            </div>
-                                            <div class="media-body pr-2">
-                                                <div class="font-w600">You have a new follower</div>
-                                                <small class="text-muted">15 min ago</small>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="text-dark media py-2" href="javascript:void(0)">
-                                            <div class="mr-2 ml-3">
-                                                <i class="fa fa-fw fa-plus-circle text-info"></i>
-                                            </div>
-                                            <div class="media-body pr-2">
-                                                <div class="font-w600">1 new sale, keep it up</div>
-                                                <small class="text-muted">22 min ago</small>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="text-dark media py-2" href="javascript:void(0)">
-                                            <div class="mr-2 ml-3">
-                                                <i class="fa fa-fw fa-times-circle text-danger"></i>
-                                            </div>
-                                            <div class="media-body pr-2">
-                                                <div class="font-w600">Update failed, restart server</div>
-                                                <small class="text-muted">26 min ago</small>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="text-dark media py-2" href="javascript:void(0)">
-                                            <div class="mr-2 ml-3">
-                                                <i class="fa fa-fw fa-plus-circle text-info"></i>
-                                            </div>
-                                            <div class="media-body pr-2">
-                                                <div class="font-w600">2 new sales, keep it up</div>
-                                                <small class="text-muted">33 min ago</small>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="text-dark media py-2" href="javascript:void(0)">
-                                            <div class="mr-2 ml-3">
-                                                <i class="fa fa-fw fa-user-plus text-success"></i>
-                                            </div>
-                                            <div class="media-body pr-2">
-                                                <div class="font-w600">You have a new subscriber</div>
-                                                <small class="text-muted">41 min ago</small>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="text-dark media py-2" href="javascript:void(0)">
-                                            <div class="mr-2 ml-3">
-                                                <i class="fa fa-fw fa-check-circle text-success"></i>
-                                            </div>
-                                            <div class="media-body pr-2">
-                                                <div class="font-w600">You have a new follower</div>
-                                                <small class="text-muted">42 min ago</small>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="p-2 border-top">
-                                    <a class="btn btn-sm btn-light btn-block text-center" href="javascript:void(0)">
-                                        <i class="fa fa-fw fa-arrow-down mr-1"></i> Load More..
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END Notifications Dropdown -->
-                    </div>
-                    <!-- END Right Section -->
-                </div>
-                <!-- END Header Content -->
-
-                <!-- Header Search -->
-                <div id="page-header-search" class="overlay-header bg-white">
-                    <div class="content-header">
-                        <form class="w-100" action="be_pages_generic_search.html" method="POST">
-                            <div class="input-group input-group-sm">
-                                <div class="input-group-prepend">
-                                    <button type="button" class="btn btn-danger" data-toggle="layout" data-action="header_search_off">
-                                        <i class="fa fa-fw fa-times-circle"></i>
-                                    </button>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- END Header Search -->
-
-                <div id="page-header-loader" class="overlay-header bg-white">
-                    <div class="content-header">
-                        <div class="w-100 text-center">
-                            <i class="fa fa-fw fa-circle-notch fa-spin"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- END Header Loader -->
-            </header>
-            <!-- END Header -->
-
-            <!-- Main Container -->
-            <main id="main-container">
-
-                <!-- Page Content -->
-                <div class="content content-narrow">
-                    <div class="profile_back">
-                        <p><a href="doctor_cases.html" class="back_btn"><i class="fas fa-arrow-left"></i> Back</a></p>
-                    </div>
-                    <div class="block-header">
-                        <h3 class="block-title">Case Details</h3>
-                    </div>
-                    <!-- Dynamic Table Full -->
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="block rounded">
-                                <div class="block-content block-content-full">
-                                    <div class="case_details_area">
+                        <div class="block rounded">
+                            <div class="block-content block-content-full">
+                                <div class="case_details_area_bottom">
+                                    <h5>Description</h5>
+                                    <div class="row mt-5">
+                                        <div class="col-12">
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                                        </div>
+                                    </div>
+                                    <h5>Answered Questions</h5>
+                                    <div class="check_box_area">
+                                        <h5>1 . Lorem Ipsum is simply dummy text of the printing and?</h5>
                                         <div class="row">
-                                            <div class="col-4">
-                                                <div class="image_area text-center">
-                                                    <img src="assets/media/photos/xs/avatar1.jpg" alt="">
-                                                    <h5>Leslie Alexander</h5>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
+                                                    <label class="custom-control-label" for="customCheck">Option 1</label>
                                                 </div>
                                             </div>
-                                            <div class="col-8">
-                                                <div class="address_line_area case_details_style">
-                                                    <ul>
-                                                        <li><span>Gender :</span>Female</li>
-                                                        <li><span>Age : </span>23</li>
-                                                        <li><span>Total Cases : </span>4 </li> 
-                                                        <li><span>Added Time : </span>12:45PM, 10/10/2020</li>
-                                                    </ul>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example2">
+                                                    <label class="custom-control-label" for="customCheck">Option 2</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example3">
+                                                    <label class="custom-control-label" for="customCheck">Option 3</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example4">
+                                                    <label class="custom-control-label" for="customCheck">Option 4</label>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block rounded">
-                                <div class="block-content block-content-full">
-                                    <div class="case_details_area_bottom">
-                                        <h5>Answered Questions</h5>
-                                        <div class="check_box_area"> 
-                                            <h5>1 . Lorem Ipsum is simply dummy text of the printing and?</h5>
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
-                                                        <label class="custom-control-label" for="customCheck">Option 1</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example2">
-                                                        <label class="custom-control-label" for="customCheck">Option 2</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example3">
-                                                        <label class="custom-control-label" for="customCheck">Option 3</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example4">
-                                                        <label class="custom-control-label" for="customCheck">Option 4</label>
-                                                    </div>
+                                        <hr>
+                                        <h5>2 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
+                                                    <label class="custom-control-label" for="customCheck">Option 1</label>
                                                 </div>
                                             </div>
-                                            <hr>
-                                            <h5>2 . Lorem Ipsum is simply dummy text of the printing and?</h5>
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
-                                                        <label class="custom-control-label" for="customCheck">Option 1</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example2">
-                                                        <label class="custom-control-label" for="customCheck">Option 2</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example3">
-                                                        <label class="custom-control-label" for="customCheck">Option 3</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example4">
-                                                        <label class="custom-control-label" for="customCheck">Option 4</label>
-                                                    </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example2">
+                                                    <label class="custom-control-label" for="customCheck">Option 2</label>
                                                 </div>
                                             </div>
-                                            <hr>
-                                            <h5>3 . Lorem Ipsum is simply dummy text of the printing and?</h5>
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
-                                                        <label class="custom-control-label" for="customCheck">Option 1</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example2">
-                                                        <label class="custom-control-label" for="customCheck">Option 2</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example3">
-                                                        <label class="custom-control-label" for="customCheck">Option 3</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example4">
-                                                        <label class="custom-control-label" for="customCheck">Option 4</label>
-                                                    </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example3">
+                                                    <label class="custom-control-label" for="customCheck">Option 3</label>
                                                 </div>
                                             </div>
-                                            <hr>
-                                            <h5>4 . Lorem Ipsum is simply dummy text of the printing and?</h5>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example4">
+                                                    <label class="custom-control-label" for="customCheck">Option 4</label>
                                                 </div>
                                             </div>
-                                            <hr>
-                                            <h5>5 . Lorem Ipsum is simply dummy text of the printing and?</h5>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <h5>6 . Lorem Ipsum is simply dummy text of the printing and?</h5>
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
-                                                        <label class="custom-control-label" for="customCheck">Option 1</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example2">
-                                                        <label class="custom-control-label" for="customCheck">Option 2</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example3">
-                                                        <label class="custom-control-label" for="customCheck">Option 3</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example4">
-                                                        <label class="custom-control-label" for="customCheck">Option 4</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <h5>7 . Lorem Ipsum is simply dummy text of the printing and?</h5>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-                                                </div>
-                                            </div>
-                                            <hr class="ab_hr_style">
-                                            <h5>Description</h5>
-                                            <div class="row mt-5">
-                                                <div class="col-12">
-                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-                                                </div>
-                                            </div>   
                                         </div>
-                                    </div>
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="case_details_image_area">
-                                <img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image">
-                                <ul>
-                                    <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
-                                    <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
-                                    <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
-                                    <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
-                                    <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
-                                </ul>
-                            </div>
-                            <div class="case_details_history_area bg-white rounded">
-                                <h5>Evaluation History</h5>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Evaluated Time</th>
-                                            <th>Doctor</th>
-                                            <th>Diagnosis</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>12:45PM, 10/10/2020</td>
-                                            <td>Dr. Jacob Jones</td>
-                                            <td><button class="case_btn_style safe_bg_color">safe</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>12:45PM, 10/10/2020</td>
-                                            <td>Dr. Jacob Jones</td>
-                                            <td><button class="case_btn_style unclear_bg_color">unclear picture</button></td>
-                                        </tr> 
-                                        <tr>
-                                            <td>12:45PM, 10/10/2020</td>
-                                            <td>Dr. Jacob Jones</td>
-                                            <td><button class="case_btn_style safe_bg_color">safe</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p class="text-right"><a href="#" class="view_more_design">View More</a></p>
-                            </div>
-
-                            <div class="block rounded">
-                                <div class="block-content block-content-full">
-                                    <div class="case_details_area">
-                                        <div class="row"> 
-                                            <div class="col-12">   
-                                                <form method="" action="admin_cases.html">
-                                                    <div class="form-group">
-                                                        <label for="doctors">Assign to Doctor</label>
-                                                        <hr class="ab_hr_style">
-                                                        <select class="form-control" id="doctors">
-                                                            <option selected value="">Choose Doctor...</option>
-                                                            <option value="Dr. Jacob Jones">Dr. Jacob Jones</option>
-                                                            <option value="Dr. Jacob Jones">Dr. Jacob Jones</option>
-                                                            <option value="Dr. Jacob Jones">Dr. Jacob Jones</option>
-                                                        </select><br>
-                                                        <button type="submit" value="assign" class="add_btn_style">Assign</button>
-                                                    </div> 
-                                                </form> 
+                                        <hr>
+                                        <h5>3 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
+                                                    <label class="custom-control-label" for="customCheck">Option 1</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example2">
+                                                    <label class="custom-control-label" for="customCheck">Option 2</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example3">
+                                                    <label class="custom-control-label" for="customCheck">Option 3</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example4">
+                                                    <label class="custom-control-label" for="customCheck">Option 4</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>4 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>5 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>6 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
+                                                    <label class="custom-control-label" for="customCheck">Option 1</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example2">
+                                                    <label class="custom-control-label" for="customCheck">Option 2</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example3">
+                                                    <label class="custom-control-label" for="customCheck">Option 3</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example4">
+                                                    <label class="custom-control-label" for="customCheck">Option 4</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>7 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -527,40 +461,108 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- END Page Content -->
-            </main>
-            <!-- END Main Container -->
-
-            <!-- Footer -->
-            <footer id="page-footer" class="bg-body-light">
-                <div class="content py-3">
-                    <div class="row font-size-sm">
-                        <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-right">
-                            Crafted with <i class="fa fa-heart text-danger"></i> by <a class="font-w600" href="#" target="_blank">Healthcare</a>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="case_details_image_area">
+                            <img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image">
+                            <ul>
+                                <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
+                                <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
+                                <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
+                                <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
+                                <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
+                            </ul>
                         </div>
-                        <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-left">
-                            <a class="font-w600" href="#" target="_blank">Healthcare</a> &copy; <span data-toggle="year-copy"></span>
+                        <div class="case_details_history_area bg-white rounded">
+                            <h5>Evaluation History</h5>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Evaluated Time</th>
+                                        <th>Doctor</th>
+                                        <th>Diagnosis</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>12:45PM, 10/10/2020</td>
+                                        <td>Dr. Jacob Jones</td>
+                                        <td><button class="case_btn_style safe_bg_color">safe</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:45PM, 10/10/2020</td>
+                                        <td>Dr. Jacob Jones</td>
+                                        <td><button class="case_btn_style unclear_bg_color">unclear picture</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:45PM, 10/10/2020</td>
+                                        <td>Dr. Jacob Jones</td>
+                                        <td><button class="case_btn_style safe_bg_color">safe</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-right"><a href="#" class="view_more_design">View More</a></p>
+                        </div>
+
+                        <div class="block rounded">
+                            <div class="block-content block-content-full">
+                                <div class="case_details_area">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <form method="" action="admin_cases.html">
+                                                <div class="form-group">
+                                                    <label for="doctors">Assign to Doctor</label>
+                                                    <hr class="ab_hr_style">
+                                                    <select class="form-control" id="doctors">
+                                                        <option selected value="">Choose Doctor...</option>
+                                                        <option value="Dr. Jacob Jones">Dr. Jacob Jones</option>
+                                                        <option value="Dr. Jacob Jones">Dr. Jacob Jones</option>
+                                                        <option value="Dr. Jacob Jones">Dr. Jacob Jones</option>
+                                                    </select><br>
+                                                    <button type="submit" value="assign" class="add_btn_style">Assign</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </footer>
-            <!-- END Footer -->
-        </div>
-        <!-- END Page Container -->
-        <script src="assets/js/halthcare.core.min.js"></script>
-        <script src="assets/js/halthcare.app.min.js"></script>
+            </div>
+            <!-- END Page Content -->
+        </main>
+        <!-- END Main Container -->
 
-        <!-- Page JS Plugins -->
-        <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
-        <script src="assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
-        <script src="assets/js/plugins/datatables/buttons/dataTables.buttons.min.js"></script>
-        <script src="assets/js/plugins/datatables/buttons/buttons.print.min.js"></script>
-        <script src="assets/js/plugins/datatables/buttons/buttons.html5.min.js"></script>
-        <script src="assets/js/plugins/datatables/buttons/buttons.flash.min.js"></script>
-        <script src="assets/js/plugins/datatables/buttons/buttons.colVis.min.js"></script>
+        <!-- Footer -->
+        <footer id="page-footer" class="bg-body-light">
+            <div class="content py-3">
+                <div class="row font-size-sm">
+                    <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-right">
+                        Crafted with <i class="fa fa-heart text-danger"></i> by <a class="font-w600" href="#" target="_blank">Healthcare</a>
+                    </div>
+                    <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-left">
+                        <a class="font-w600" href="#" target="_blank">Healthcare</a> &copy; <span data-toggle="year-copy"></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+    <script src="assets/js/halthcare.core.min.js"></script>
+    <script src="assets/js/halthcare.app.min.js"></script>
 
-        <!-- Page JS Code -->
-        <script src="assets/js/pages/halthcare_datatables.min.js"></script>
-    </body>
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/dataTables.buttons.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.print.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.html5.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.flash.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.colVis.min.js"></script>
+
+    <!-- Page JS Code -->
+    <script src="assets/js/pages/halthcare_datatables.min.js"></script>
+</body>
+
 </html>

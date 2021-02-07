@@ -5,13 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Healthcare | Admin-Dashboard </title>
+    <title>Healthcare | Admin-Evaluated Case Details</title>
 
+    <!-- Icons -->
     <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
     <!-- END Icons -->
 
-    <!-- Stylesheets -->
+    <!-- Page JS Plugins CSS -->
+    <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="assets/js/plugins/datatables/buttons-bs4/buttons.bootstrap4.min.css">
+
+    <!-- Fonts and OneUI framework -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" id="css-main" href="assets/css/halthcare.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -36,13 +42,13 @@
             <div class="content-side content-side-full">
                 <ul class="nav-main">
                     <li class="nav-main-item">
-                        <a class="nav-main-link active" href="index.html">
+                        <a class="nav-main-link" href="index.html">
                             <i class="nav-main-link-icon si si-speedometer"></i>
                             <span class="nav-main-link-name">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="admin_cases.html">
+                        <a class="nav-main-link active" href="admin_cases.html">
                             <i class='nav-main-link-icon fas fa-stethoscope'></i>
                             <span class="nav-main-link-name">Cases</span>
                         </a>
@@ -52,7 +58,7 @@
                             <i class='nav-main-link-icon fas fa-user-md'></i>
                             <span class="nav-main-link-name">Doctors</span>
                         </a>
-                    </li> 
+                    </li>
                     <li class="nav-main-item">
                         <a class="nav-main-link" href="admin_patients.html">
                             <i class='nav-main-link-icon fas fa-wheelchair'></i>
@@ -85,8 +91,8 @@
                 <!-- Left Section -->
                 <div class="d-flex align-items-center">
                     <!-- Toggle Sidebar -->
-                    <button type="button" class="btn btn-sm btn-dual mr-2 d-lg-none" data-toggle="layout" data-action="sidebar_toggle"> 
-                        <i class="fa fa-fw fa fa-fw fa-bars"></i>
+                    <button type="button" class="btn btn-sm btn-dual mr-2 d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+                        <i class="fa fa-fw fa-bars"></i>
                     </button>
                     <!-- END Toggle Sidebar -->
 
@@ -95,10 +101,13 @@
                         <i class="fa fa-fw fa-ellipsis-v"></i>
                     </button>
                     <!-- END Toggle Mini Sidebar -->
+
                     <button type="button" class="btn btn-sm btn-dual d-sm-none" data-toggle="layout" data-action="header_search_on">
                         <i class="si si-magnifier"></i>
                     </button>
                     <!-- END Open Search Section -->
+
+                    <!-- Search Form (visible on larger screens) -->
                     <form class="d-none d-sm-inline-block" action="be_pages_generic_search.html" method="POST">
                         <div class="input-group input-group-sm">
                             <input type="text" class="form-control form-control-alt" placeholder="Search.." id="page-header-search-input2" name="page-header-search-input2">
@@ -271,216 +280,272 @@
 
             <!-- Page Content -->
             <div class="content content-narrow">
-                <!-- Stats -->
-                <div class="row">
-                    <div class="col-md-9">
-                        <div class="row">
-                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
-                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
-                                    <div class="dashboard_main_tab_box_conten">
-                                        <div class="row">
-                                            <div class="col-4 pr-0">
-                                                <div class="dashboard_tab_icon color_icon_1">
-                                                    <i class="nav-main-link-icon fas fa-user-injured"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="dashboard_tab_text">
-                                                    <h5>Total Patients</h5>
-                                                    <h4 class="color_text_1">213</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
-                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
-                                    <div class="dashboard_main_tab_box_conten">
-                                        <div class="row">
-                                            <div class="col-4 pr-0">
-                                                <div class="dashboard_tab_icon color_icon_2">
-                                                    <i class='nav-main-link-icon fas fa-user-md'></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="dashboard_tab_text">
-                                                    <h5>Evaluated Patients</h5>
-                                                    <h4 class="color_text_2">213</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
-                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
-                                    <div class="dashboard_main_tab_box_conten">
-                                        <div class="row">
-                                            <div class="col-4 pr-0">
-                                                <div class="dashboard_tab_icon color_icon_3">
-                                                    <i class="nav-main-link-icon fas fa-procedures"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="dashboard_tab_text">
-                                                    <h5>Pending Patients</h5>
-                                                    <h4 class="color_text_3">213</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
-                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
-                                    <div class="dashboard_main_tab_box_conten">
-                                        <div class="row">
-                                            <div class="col-4 pr-0">
-                                                <div class="dashboard_tab_icon color_icon_4">
-                                                    <i class='nav-main-link-icon fas fa-user-md'></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="dashboard_tab_text">
-                                                    <h5>Total Doctors</h5>
-                                                    <h4 class="color_text_4">213</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
-                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
-                                    <div class="dashboard_main_tab_box_conten">
-                                        <div class="row">
-                                            <div class="col-4 pr-0">
-                                                <div class="dashboard_tab_icon color_icon_5">
-                                                    <i class="nav-main-link-icon far fa-hospital"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="dashboard_tab_text">
-                                                    <h5>Cooming Soon</h5>
-                                                    <h4 class="color_text_5">213</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-6 col-xl-4">
-                                <a class="dashboard_main_tab_box" href="javascript:void(0)">
-                                    <div class="dashboard_main_tab_box_conten">
-                                        <div class="row">
-                                            <div class="col-4 pr-0">
-                                                <div class="dashboard_tab_icon color_icon_6">
-                                                    <i class="nav-main-link-icon fas fa-user-nurse"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="dashboard_tab_text">
-                                                    <h5>Total Visitor</h5>
-                                                    <h4 class="color_text_6">213</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="dashboard_all_you_need">
-                            <p>All you need to know about Healthcare!</p>
-                            <a href="help.html" class="view_more_design">Know More</a>
-                        </div>
-                    </div>
+                <div class="profile_back">
+                    <p><a href="#" class="back_btn"><i class="fas fa-arrow-left"></i> Back</a></p>
                 </div>
-                <!-- END Stats -->
-
-                <!-- Dashboard Charts -->
+                <div class="block-header">
+                    <h3 class="block-title">Case Details</h3>
+                </div>
+                <!-- Dynamic Table Full -->
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="block block-rounded block-mode-loading-oneui">
-                            <div class="block-header block-header-default">
-                                <h5 class="block-title">Case</h5>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="block rounded">
+                            <div class="block-content block-content-full">
+                                <div class="case_details_area">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="image_area text-center">
+                                                <img src="assets/media/photos/xs/avatar1.jpg" alt="">
+                                                <h5>Leslie Alexander</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="address_line_area case_details_style">
+                                                <ul>
+                                                    <li><span>Gender :</span>Female</li>
+                                                    <li><span>Age : </span>23</li>
+                                                    <li><span>Total Case : </span>4</li>
+                                                    <li><span>Evaluated Time : </span>12:45PM, 10/10/2020</li>
+                                                    <li><span>Call Now :</span> <a href="tel:+880 17121 12314">+880 17121 12314</a> </li>
+                                                    <li><span>Email :</span> <a href="mailto:email@mail.com">email@mail.com</a> </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="block-content p-0 text-center">
-                                <div class="pt-3" style="height: 400px;"><canvas class="js-chartjs-dashboard-earnings"></canvas></div>
+                        </div>
+                        <div class="block rounded">
+                            <div class="block-content block-content-full">
+                                <div class="case_details_area_bottom"> 
+                                    <h5>Description</h5>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                                        </div>
+                                    </div>
+                                    <h5>Questions</h5>
+                                    <div class="check_box_area">
+                                        <h5>1 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
+                                                    <label class="custom-control-label" for="customCheck">Option 1</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example2">
+                                                    <label class="custom-control-label" for="customCheck">Option 2</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example3">
+                                                    <label class="custom-control-label" for="customCheck">Option 3</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example4">
+                                                    <label class="custom-control-label" for="customCheck">Option 4</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>2 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
+                                                    <label class="custom-control-label" for="customCheck">Option 1</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example2">
+                                                    <label class="custom-control-label" for="customCheck">Option 2</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example3">
+                                                    <label class="custom-control-label" for="customCheck">Option 3</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example4">
+                                                    <label class="custom-control-label" for="customCheck">Option 4</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>3 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
+                                                    <label class="custom-control-label" for="customCheck">Option 1</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example2">
+                                                    <label class="custom-control-label" for="customCheck">Option 2</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example3">
+                                                    <label class="custom-control-label" for="customCheck">Option 3</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example4">
+                                                    <label class="custom-control-label" for="customCheck">Option 4</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>4 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>5 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>6 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example1" checked>
+                                                    <label class="custom-control-label" for="customCheck">Option 1</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example2">
+                                                    <label class="custom-control-label" for="customCheck">Option 2</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example3">
+                                                    <label class="custom-control-label" for="customCheck">Option 3</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" disabled class="custom-control-input" id="customCheck" name="example4">
+                                                    <label class="custom-control-label" for="customCheck">Option 4</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h5>7 . Lorem Ipsum is simply dummy text of the printing and?</h5>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- END Dashboard Charts -->
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="case_details_image_area">
+                            <img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image">
+                            <ul>
+                                <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
+                                <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
+                                <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
+                                <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
+                                <li><img src="assets/media/photos/hand.png" class="img-fluid" alt="Case Details Image"></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="block rounded">
+                            <div class="block-content block-content-full">
+                                <div class="case_details_area_bottom">
+                                    <h5>Feedback</h5>
+                                    <ul>
+                                        <li class="evaluated"><span>Evaluated By : </span>Dr. Alex Smith</li>
+                                        <li class="diagnosis"><span>Diagnosis : </span>Safe</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- Customers and Latest Orders -->
-                <div class="row">
-                    <div class="col-lg-9 col-md-12">
-                        <div class="dashboard_table_area">
-                            <h5>Case Activity</h5>
-                            <table class="table m-b-0 table-bordered table-striped table-vcenter js-dataTable-full">
-                                <thead class="thead-light">
+                        <div class="block rounded">
+                            <div class="block-content block-content-full">
+                                <div class="case_details_area_bottom">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="col-12">
+                                                <h5>Conversations</h5>
+                                            </div>
+                                            <div class="text-left">
+                                                <div class="col-12">
+                                                    <img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image">
+                                                    <span>Lorem ipsum dolor sit amet.</span>
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <div class="col-12">
+                                                    <span>Lorem ipsum dolor sit amet, consetetur sadipscing. </span>
+                                                    <img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case_details_history_area bg-white rounded">
+                            <h5>Evaluation History</h5>
+                            <table class="table">
+                                <thead>
                                     <tr>
-                                        <th>Patient Name</th>
-                                        <th>Added Date</th>
-                                        <th>Evaluate Date</th>
-                                        <th>Satus</th>
-                                        <th>Doctor</th> 
+                                        <th>Evaluated Time</th>
+                                        <th>Doctor</th>
+                                        <th>Diagnosis</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><img src="assets/media/photos/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"> <span><a href="admin_patient_profile.html">Leslie Alexander</a></span></td>
                                         <td>12:45PM, 10/10/2020</td>
-                                        <td>12:45PM, 10/10/2020</td>
-                                        <td>Pending</td>
-                                        <td>Dr. Jacob Jones</td> 
-                                    </tr>
-                                    <tr>
-                                        <td><img src="assets/media/photos/xs/avatar1.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"> <span><a href="admin_patient_profile.html">Leslie Alexander</a></span></td>
-                                        <td>12:45PM, 10/10/2020</td>
-                                        <td>12:45PM, 10/10/2020</td>
-                                        <td>Evaluated</td>
-                                        <td>Dr. Jacob Jones</td> 
-                                    </tr>
-                                    <tr>
-                                        <td><img src="assets/media/photos/xs/avatar4.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"> <span><a href="admin_patient_profile.html">Leslie Alexander</a></span></td>
-                                        <td>12:45PM, 10/10/2020</td>
-                                        <td>12:45PM, 10/10/2020</td>
-                                        <td>Pending</td>
                                         <td>Dr. Jacob Jones</td>
+                                        <td><a href="admin_evaluated_case_details.html" class="safe_btn_style">Safe</a></td>
                                     </tr>
                                     <tr>
-                                        <td><img src="assets/media/photos/xs/avatar2.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"> <span><a href="admin_patient_profile.html">Leslie Alexander</a></span></td>
                                         <td>12:45PM, 10/10/2020</td>
-                                        <td>12:45PM, 10/10/2020</td>
-                                        <td>Evaluated</td>
                                         <td>Dr. Jacob Jones</td>
+                                        <td><a href="admin_evaluated_case_details.html" class="active_btn_style">Unclear picture</a></td>
                                     </tr>
                                     <tr>
-                                        <td><img src="assets/media/photos/xs/avatar5.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"> <span><a href="admin_patient_profile.html">Leslie Alexander</a></span></td>
                                         <td>12:45PM, 10/10/2020</td>
-                                        <td>12:45PM, 10/10/2020</td>
-                                        <td>Evaluated</td>
                                         <td>Dr. Jacob Jones</td>
+                                        <td><a href="admin_evaluated_case_details.html" class="safe_btn_style">Safe</a></td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-12">
-                        <div class="dashboard_chat_area">
-                            <h5>Patients</h5>
-                            <hr>
-                            <canvas class="js-chartjs-donut"></canvas>
-                            <p>Total Evaluated Patients</p>
+                            <p class="text-right"><a href="admin_patient_profile.html" class="view_more_design">View More</a></p>
                         </div>
                     </div>
                 </div>
-                <!-- END Customers and Latest Orders -->
             </div>
             <!-- END Page Content -->
         </main>
@@ -501,12 +566,21 @@
         </footer>
         <!-- END Footer -->
     </div>
+    <!-- END Page Container -->
     <script src="assets/js/halthcare.core.min.js"></script>
     <script src="assets/js/halthcare.app.min.js"></script>
-    <script src="assets/js/plugins/chart.js/Chart.bundle.min.js"></script>
 
-    <script src="assets/js/pages/halthcare_charts.min.js"></script>
-    <script src="assets/js/pages/halthcare_dashboard.min.js"></script>
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/dataTables.buttons.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.print.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.html5.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.flash.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.colVis.min.js"></script>
+
+    <!-- Page JS Code -->
+    <script src="assets/js/pages/halthcare_datatables.min.js"></script>
 </body>
 
 </html>
