@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+        <title>Healthcare | Patients - Pay With SSLCOMMERZ</title>
+
+        <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+        <!-- END Icons -->
+
+        <!-- Stylesheets -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" id="css-main" href="assets/css/halthcare.min.css">
+        <link rel="stylesheet" href="assets/css/style.css"> 
+        
+    </head>
+    <body>
+        <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed">
+            <nav id="sidebar" aria-label="Main Navigation">
+                <!-- Side Header -->
+                <div class="content-header bg-white-5">
+                    <!-- Logo -->
+                    <a class="font-w600 text-dual" href="index.html">
+                        <i class="fa fa-circle-notch text-primary"></i>
+                        <span class="smini-hide">
+                            <span class="font-w700 font-size-h5">Healthcare</span>
+                        </span>
+                    </a>
+                    <!-- END Logo -->
+                </div>
+                <!-- END Side Header -->
+
+                <!-- Side Navigation -->
+                <div class="content-side content-side-full">
+                    <ul class="nav-main">
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="index.html">
+                                <i class="nav-main-link-icon si si-speedometer"></i>
+                                <span class="nav-main-link-name">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link active" href="patients_cases.html">
+                                <i class='nav-main-link-icon fas fa-stethoscope'></i>
+                                <span class="nav-main-link-name">Cases</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="patients_payment.html">
+                                <i class='nav-main-link-icon fas fa-clinic-medical'></i>
+                                <span class="nav-main-link-name">Payment</span>
+                            </a>
+                        </li> 
+                        <hr>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="help.html">
+                                <i class="nav-main-link-icon si si-info"></i>
+                                <span class="nav-main-link-name">Help</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END Side Navigation -->
+            </nav>
+            <!-- END Sidebar -->
+
+            <!-- Header -->
+            <header id="page-header">
+                <!-- Header Content -->
+                <div class="content-header">
+                    <!-- Left Section -->
+                    <div class="d-flex align-items-center">
+                        <!-- Toggle Sidebar -->
+                        <button type="button" class="btn btn-sm btn-dual mr-2 d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
+                        <!-- END Toggle Sidebar -->
+
+                        <!-- Toggle Mini Sidebar -->
+                        <button type="button" class="btn btn-sm btn-dual mr-2 d-none d-lg-inline-block" data-toggle="layout" data-action="sidebar_mini_toggle">
+                            <i class="fa fa-fw fa-ellipsis-v"></i>
+                        </button>
+                        <!-- END Toggle Mini Sidebar -->
+                        <button type="button" class="btn btn-sm btn-dual d-sm-none" data-toggle="layout" data-action="header_search_on">
+                            <i class="si si-magnifier"></i>
+                        </button>
+                        <!-- END Open Search Section -->
+                        <form class="d-none d-sm-inline-block" action="be_pages_generic_search.html" method="POST">
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control form-control-alt" placeholder="Search.." id="page-header-search-input2" name="page-header-search-input2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text bg-body border-0">
+                                        <i class="si si-magnifier"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- END Search Form -->
+                    </div>
+                    <!-- END Left Section -->
+
+                    <!-- Right Section -->
+                    <div class="d-flex align-items-center">
+                        <!-- User Dropdown -->
+                        <div class="dropdown d-inline-block ml-2">
+                            <button type="button" class="btn btn-sm btn-dual" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded" src="assets/media/photos/xs/avatar1.jpg" alt="Header Avatar" style="width: 18px;">
+                                <span class="d-none d-sm-inline-block ml-1">Admin</span>
+                                <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-user-dropdown">
+                                <div class="p-3 text-center bg-primary">
+                                    <img class="img-avatar img-avatar48 img-avatar-thumb" src="assets/media/photos/xs/avatar1.jpg" alt="">
+                                </div>
+                                <div class="p-2">
+                                    <h5 class="dropdown-header text-uppercase">User Options</h5>
+                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                        <span>Profile</span>
+                                        <span>
+                                            <i class="si si-user ml-1"></i>
+                                        </span>
+                                    </a>
+                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                                        <span>Settings</span>
+                                        <i class="si si-settings"></i>
+                                    </a>
+                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="login.html">
+                                        <span>Log Out</span>
+                                        <i class="si si-logout ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END User Dropdown -->
+
+                   
+                    </div>
+                    <!-- END Right Section -->
+                </div>
+                <!-- END Header Content -->
+
+                <!-- Header Search -->
+                <div id="page-header-search" class="overlay-header bg-white">
+                    <div class="content-header">
+                        <form class="w-100" action="be_pages_generic_search.html" method="POST">
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <button type="button" class="btn btn-danger" data-toggle="layout" data-action="header_search_off">
+                                        <i class="fa fa-fw fa-times-circle"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- END Header Search -->
+
+                <div id="page-header-loader" class="overlay-header bg-white">
+                    <div class="content-header">
+                        <div class="w-100 text-center">
+                            <i class="fa fa-fw fa-circle-notch fa-spin"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Header Loader -->
+            </header>
+            <!-- END Header -->
+
+            <!-- Main Container -->
+            <main id="main-container"> 
+                <!-- Page Content -->
+                <div class="content content-narrow"> 
+                    <!-- Dynamic Table Full -->
+                    <div class="block">
+                        <div class="block-content block-content-full">
+                            <ul class="nav nav-tabs-new2">
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab">Case Cart</a></li> 
+                            </ul>
+                            <div class="tab-content mt-3">
+                                <div class="tab-pane active" id="history"> 
+                                    <table class="table m-b-0 table-bordered table-striped table-vcenter js-dataTable-full">
+                                        <thead class="thead-light"> 
+                                            <tr>
+                                                <th>Case ID</th>
+                                                <th>Patient Name</th>
+                                                <th>Added Time</th>
+                                                <th>Quantity</th>
+                                                <th>Price (৳)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr> 
+                                                <td>CASE-01</td>
+                                                <td>Imran Hossain</td>
+                                                <td>12:45PM, 10/10/2020</td> 
+                                                <td>1</td> 
+                                                <td>1000 <span>Tk</span></td>  
+                                            </tr> 
+                                        </tbody>
+                                    </table>
+                                </div> 
+                            </div> 
+                            <div class="row">
+                                <div class="col-md-7"></div> 
+                                <div class="col-md-5 col-md-offset-7">
+                                    <div class="table-responsive">
+                                        <table class="table table m-b-0 table-bordered table-striped table-vcenter js-dataTable-full">
+                                            <tbody>
+                                            <tr>
+                                                <td class="text-left">Subtotal</td>
+                                                <td class="text-right">
+                                                    1000 <span>TK</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">Service Charge</td>
+                                                <td class="text-right">
+                                                    20 <span>TK</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">
+                                                    <strong>Total</strong>
+                                                </td>
+                                                <td class="text-right grand_total">
+                                                    <input type="hidden" value="200">
+                                                    1020 <span>TK</span>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="mobile" value="" placeholder="Mobile Number">
+                                    </div>
+                                    <div class="form-group text-right">
+                                        <button class="btn btn-danger" type="button" id="sslczPayBtn" order="6022af473661a" postdata="" endpoint="https://dummypay.publicdemo.xyz/server.php" actionurl="https://dummypay.publicdemo.xyz/action.php" class="btn btn-block btn--dark btn--rounded btn--w-icon" name="button">
+                                            <i class="icon icon--arrow-right"></i>
+                                            Pay With  SSLCOMMERZ
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                                 
+
+                        </div>
+                    </div>
+                    <!-- END Dynamic Table Full -->
+                </div>
+                <!-- END Page Content --> 
+            </main>
+            <!-- END Main Container -->
+  
+            <!-- Footer -->
+            <footer id="page-footer" class="bg-body-light">
+                <div class="content py-3">
+                    <div class="row font-size-sm">
+                        <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-right">
+                            Crafted with <i class="fa fa-heart text-danger"></i> by <a class="font-w600" href="#" target="_blank">Healthcare</a>
+                        </div>
+                        <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-left">
+                            <a class="font-w600" href="#" target="_blank">Healthcare</a> &copy; <span data-toggle="year-copy"></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- END Footer -->
+        </div>
+        <script src="assets/js/halthcare.core.min.js"></script>
+        <script src="assets/js/halthcare.app.min.js"></script>
+        <script src="assets/js/plugins/chart.js/Chart.bundle.min.js"></script>
+
+        <script src="assets/js/pages/halthcare_charts.min.js"></script>
+        <script src="assets/js/pages/halthcare_dashboard.min.js"></script>
+    </body>
+</html>

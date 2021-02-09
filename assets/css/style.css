@@ -656,3 +656,21 @@ a.delete_btn_style:focus{
     }
 
 }
+
+#sslczPayBtn {
+    position: relative; 
+    border: 0 none;
+    color: #fff;
+    padding: 8px 20px 8px 70px;
+    border-radius: 4px;
+    height: 42px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 13px;
+    width: 254px;
+    outline: 0;
+    overflow: hidden; 
+    background: #295cab!important; 
+    padding: 8px 20px 8px 30px!important;
+    height: auto!important;
+}
