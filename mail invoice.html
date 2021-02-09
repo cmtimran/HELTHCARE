@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Healthcare | Invoice</title>
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <!-- END Icons -->
+
+    <!-- Page JS Plugins CSS -->
+    <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="assets/js/plugins/datatables/buttons-bs4/buttons.bootstrap4.min.css">
+
+    <!-- Fonts and OneUI framework -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" id="css-main" href="assets/css/halthcare.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body> 
+    <!-- Main Container -->
+    <main id="main-container">
+        <!-- Page Content -->
+        <div class="content content-boxed">   
+            <!-- Invoice -->
+            <div class="block">
+                <div class="block-content block-content-narrow">
+                    <div class="row">
+                        <div class="col-md-11"></div> 
+                        <div class="col-md-1 col-md-offset-11">
+                            <button  style="width: 85px; background-color: #e9e9e9;" class="form-control" onclick="window.print()"><i class="si si-printer"></i> Print</button> 
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Invoice Info -->
+                    <div class="h1 text-center push-30-t push-30 hidden-print">#INVOICE</div>
+                    <hr class="hidden-print">
+                    <div class="row items-push-2x">
+                        <!-- Company Info -->
+                        <div class="col-xs-6 col-sm-4 col-lg-6">
+                            <a class="font-w600 text-dual" href="index.html">
+                                <i class="fa fa-circle-notch text-primary"></i>
+                                <span class="smini-hide">
+                                    <span class="font-w700 font-size-h5">Healthcare</span>
+                                </span>
+                            </a>  
+                            <address>
+                                Address<br>
+                                Town/City<br>
+                                Region, Zip/Postal Code<br>
+                                <i class="si si-call-end"></i> (000) 000-0000
+                            </address>
+                        </div>
+                        <!-- END Company Info -->
+
+                        <!-- Client Info -->
+                        <div class="col-xs-6 col-sm-4 col-lg-6 text-right">
+                            <p class="h2 font-w400 push-5">Patient Name</p>
+                            <address>
+                                Address<br>
+                                Town/City<br>
+                                Region, Zip/Postal Code<br>
+                                <i class="si si-call-end"></i> (000) 000-0000
+                            </address>
+                        </div>
+                        <!-- END Client Info -->
+                    </div>
+                    <!-- END Invoice Info -->
+                </div>
+                <!-- Table -->
+                <div class="block-content">
+                    <div class="row">
+                        <table class="table m-b-0 table-bordered table-striped">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Case ID</th>
+                                    <th>Patient Name</th>
+                                    <th>Added Time</th>
+                                    <th>Quantity</th>
+                                    <th>Price (৳)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CASE-01</td>
+                                    <td>Imran Hossain</td>
+                                    <td>12:45PM, 10/10/2020</td>
+                                    <td>1</td>
+                                    <td>1000 <span>Tk</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-7"></div>
+                        <div class="col-md-5 col-md-offset-7">
+                            <table class="table table m-b-0 table-bordered table-striped table-vcenter">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left">Subtotal</td>
+                                        <td class="text-right">
+                                            1000 <span>TK</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Service Charge</td>
+                                        <td class="text-right">
+                                            20 <span>TK</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <strong>Total</strong>
+                                        </td>
+                                        <td class="text-right grand_total">
+                                            <input type="hidden" value="200">
+                                            1020 <span>TK</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Table -->
+
+                <!-- Footer -->
+                <hr>
+                <p class="text-muted text-center"><small>Thank you very much for doing business with us. We look forward to working with you again!</small></p>
+                <!-- END Footer -->
+
+                <!-- Footer -->
+                <hr>
+                <div class="text-center text-muted">Developed <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="" target="_blank">Elite Force</a></span>
+                </div> <br>
+                <!-- END Footer -->
+
+            </div>
+            <!-- END Invoice -->
+        </div>
+        <!-- END Page Content -->
+    </main>
+    <!-- END Main Container -->
+
+    <!-- END Page Container -->
+    <script src="assets/js/halthcare.core.min.js"></script>
+    <script src="assets/js/halthcare.app.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/dataTables.buttons.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.print.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.html5.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.flash.min.js"></script>
+    <script src="assets/js/plugins/datatables/buttons/buttons.colVis.min.js"></script>
+
+    <!-- Page JS Code -->
+    <script src="assets/js/pages/halthcare_datatables.min.js"></script>
+</body>
+
+</html>
