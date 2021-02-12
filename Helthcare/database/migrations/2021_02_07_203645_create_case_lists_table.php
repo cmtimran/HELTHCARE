@@ -15,7 +15,8 @@ class CreateCaseListsTable extends Migration
     {
         Schema::create('case_lists', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->integer('order_id');
             $table->text('case_description')->nullable();
             $table->text('question_one')->nullable();
             $table->text('question_two')->nullable();

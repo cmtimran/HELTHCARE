@@ -15,8 +15,7 @@ class CreateCaseImgsTable extends Migration
     {
         Schema::create('case_imgs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('case_list_id')->constrained('case_lists')
-            ->onDelete('cascade');
+            $table->foreignId('case_list_id')->constrained('case_lists')->onDelete('cascade');
             $table->string('case_img_name')->nullable();
             $table->timestamps();
         });
