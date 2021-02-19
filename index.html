@@ -1,110 +1,361 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html class="no-js" lang="">
 
-        <title>Home | HEALTHCARE</title>
+<head>
+    <meta charset="utf-8">
+    <title>Home | Healthcare</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- END Icons -->
-        <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
-        <!-- END Icons -->
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!--Css start here-->
+    <!--Icons  css-->
+    <link rel="stylesheet" href="assets/vendors/css/all.css">
+    <link rel="stylesheet" href="assets/vendors/css/themify-icons.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
-        <!-- Styles -->
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+    <!--Bootstrap content css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--main content css-->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-            .full-height {
-                height: 100vh;
-            }
+</head>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+<body>
+    <!-- Add your site or application content here -->
 
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-        
-        <!-- Stylesheets -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height"> 
-
-            <div class="content">
-                <div class="title m-b-md">
-                    HEALTHCARE
+    <!------------------------header html start here------------------------>
+    <header class="header-area sticky">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand logo" href="index">Healthcare</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About us </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#how_works">how it works </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login"> log in </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="register" href="registration"> register </a>
+                        </li>
+                    </ul>
                 </div>
-
-                <div class="links">
-                    <a href="admin/index.html">Admin Dashboard</a> | 
-                    <a href="doctor/index.html">Doctor Dashboard</a> | 
-                    <a href="patients/index.html">Patient Dashboard</a> 
-                </div>
-                <br><br><br>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="col-sm-12 order-sm-2 py-1 text-center">
-                    Developed <i class="fa fa-heart text-danger"></i> by <a class="font-w600" href="#" target="_blank">Elite Force</a>
-                </div> 
-              </div>
             </div>
-          </div>
-              
+        </nav>
+    </header>
+    <!------------------------header html end here------------------------>
+    <!------------------------home html start here------------------------>
+    <section class="home " id="home">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="home-content">
+                        <h2>Lorem ipsum dolor sit amet, consectetur</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Quo id <br> nam sed minus voluptatem dolore, omnis tempore consequatur <br>
+                            rem vitae molestias odio itaque fugiat neque!</p>
+                        <a href="#" class="btn btn-h">contact with us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="home-thumb">
+                        <img src="assets/media/images/home.jpeg" class="img-fluid w-100" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-        
-    <!-- JavaScript -->
-    <script src="assets/bootstrap/jquery-3.2.1.slim.min.js"></script>
-    <script src="assets/bootstrap/popper.min.js"></script>
-    <script src="assets/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/js/font-awesome.js"></script>
-  </body>
+    </section>
+    <!------------------------home html end here------------------------>
+    <!------------------------about html start here------------------------>
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-thumb">
+                        <img src="assets/media/images/about.jpeg" class="img-fluid w-100" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="about-content">
+                        <h2>About us</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Nulla cupiditate saepe, perferendis vel labore necessitatibus
+                            aliquid iste, exercitationem, asperiores suscipit consequuntur
+                            nihil inventore aliquam molestiae veniam aperiam fuga expedita
+                            facere corrupti. Consequuntur quam rerum nesciunt,
+                            aspernatur neque maxime. Optio debitis cupiditate nobis
+                            laborum quidem laboriosam </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quaerat reprehenderit a illum amet .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------about html end here------------------------>
+    <!------------------------how it works  html start here------------------------>
+    <section class="how-work">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>how it works </h2>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="how-work-content">
+                        <div class="work-icon">
+                            <i class="fas fa-medkit"></i>
+                        </div>
+                        <h3>Lorem, ipsum.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Doloribus quasi rem dolor minima sit vel dolores numquam
+                            nesciunt cumque eius quo quae nihil voluptatum ab facilis,
+                            iure id architecto illo sapiente placeat</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="how-work-content">
+                        <div class="work-icon">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <h3>Lorem, ipsum.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Doloribus quasi rem dolor minima sit vel dolores numquam
+                            nesciunt cumque eius quo quae nihil voluptatum ab facilis,
+                            iure id architecto illo sapiente placeat</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="how-work-content">
+                        <div class="work-icon">
+                            <i class="fas fa-phone-volume"></i>
+                        </div>
+                        <h3>Lorem, ipsum.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Doloribus quasi rem dolor minima sit vel dolores numquam
+                            nesciunt cumque eius quo quae nihil voluptatum ab facilis,
+                            iure id architecto illo sapiente placeat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------how it works  html end here------------------------>
+    <!------------------------services html start here------------------------>
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 text-center">
+                    <div class="services-content">
+                        <div class="number">
+                            <h3>1</h3>
+                        </div>
+                        <h4>Lorem, ipsum.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="services-content">
+                        <div class="number">
+                            <h3>2</h3>
+                        </div>
+                        <h4>Lorem, ipsum.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="services-content">
+                        <div class="number">
+                            <h3>3</h3>
+                        </div>
+                        <h4>Lorem, ipsum.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="services-content">
+                        <div class="number">
+                            <h3>4</h3>
+                        </div>
+                        <h4>Lorem, ipsum.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------services  html end here------------------------>
+    <!------------------------team   html start here------------------------>
+    <section class="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>Our Doctors </h2>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                            sed diam nonumy eirmod tempor <br> invidunt ut labore et dolore magna.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-2">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="assets/media/images/team-01.jpeg" class="img-fluid w-100" alt="">
+                        </div>
+                        <div class="team-content">
+                            <h4>Adam Smith</h4>
+                            <span>Specialistläkare dermatologi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="assets/media/images/team-02.jpeg" class="img-fluid w-100" alt="">
+                        </div>
+                        <div class="team-content">
+                            <h4>Adam Smith</h4>
+                            <span>Specialistläkare dermatologi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------team  html end here------------------------>
+    <!------------------------apply-now  html start here------------------------>
+    <section class="apply-now">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="apply-now-content">
+                        <div class="dots">
+                            <span> </span>
+                            <span> </span>
+                            <span> </span>
+                            <span> </span>
+                        </div>
+                        <ul>
+                            <li class="text-1">Lorem ipsum dolor sit amet, consetetur</li>
+                            <li class="text-2">Lorem ipsum dolor sit amet, consetetur</li>
+                            <li class="text-3">Lorem ipsum dolor sit amet</li>
+                            <li class="text-4">Lorem ipsum dolor sit amet</li>
+                        </ul>
+                        <a href="#" class="btn btn-a">Start Now</a>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="apply-now-img">
+                        <img src="assets/media/images/apply-now.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------apply-now    html end here------------------------>
+    <!------------------------footer    html start here------------------------>
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-content">
+                        <div class="footer-title">
+                            <h4>Healthcare</h4>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+                        <div class="social-link">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-twitter-square"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <div class="footer-content">
+                        <div class="footer-title">
+                            <h4>Sitemap</h4>
+                        </div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Event</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer-content">
+                        <div class="footer-title">
+                            <h4>Support</h4>
+                        </div>
+                        <ul>
+                            <li><a href="#">FAQS</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-content">
+                        <div class="footer-title">
+                            <h4>Contact Us</h4>
+                        </div>
+                        <ul>
+                            <li><a href="#">
+                                    8254 S. Garfield Street.</a></li>
+                            <li><a href="#"> Grand Island, NE 68801</a></li>
+                            <li><a href="#">+123 456 7890</a></li>
+                            <li><a href="#">bluebari@gmail.com</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <div class="copyright">
+                        <p>Copyright &#169; Healthcare</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!------------------------footer end here------------------------>
+
+
+    <script src="assets/vendors/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/vendors/js/jquery.scrollUp.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
 </html>
