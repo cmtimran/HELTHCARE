@@ -157,6 +157,9 @@ a#scrollUp {
 .how-work{
     padding: 70px 0;
 }
+.carousel-inner{
+    width: 100%;
+}
 .how-work-content{
     background: #f3f9ff;
     padding: 50px 20px  30px;
