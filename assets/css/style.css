@@ -51,35 +51,33 @@ a#scrollUp {
 }
 /* End of Gobal CSS ==========*/
 /* header css here====================== */
-.header-area.header-sticky.sticky {
+.header-area.sticky {
     position: fixed;
     left: 0;
-    right: 0;
-    background: #fff;
+    right: 0; 
     z-index: 999;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .4);
-}
+}  
 .navbar-light{
-    margin-top: 20px;
+    background-color: #fff !important;
+    padding: 18px;
 }
-.logo{
+.logo{ 
+    float: inline-start;
     font-size: 30px;
     font-weight: 900;
     text-transform: uppercase;
     color: #333;
-}
-.navbar-light .nav-item .nav-link{
-   /* color: #5F6061; */
+} 
+.navbar-light .nav-item .nav-link{ 
    color: #666;
    font-size: 18px;
    font-weight: 500;
    transition: all .3s ease;
    text-transform: capitalize;
    padding-right: 10px;
-}
-.navbar-light .navbar-nav {
-   margin-right: 10%;
-}
+   line-height: 30px; 
+} 
 .navbar-light .nav-item .nav-link:hover{
     color: #6270DD;
     transition: all .3s ease;
@@ -92,19 +90,21 @@ a#scrollUp {
     background: #6270DD;
     padding: 11px 40px;
     border-radius: 8px;
+    border: 1px solid #fff;
     color: #fff;
     text-transform: capitalize;
-   text-align: center;
-   margin-left:  20%;
-   display: inline-block;
-   transition: all .3s ease;
+    text-align: center;
+    margin-left:  20%;
+    display: inline-block;
+    transition: all .3s ease;
 }
 .register:hover{
     background-color: transparent;
-    border: 2px solid #6270DD;
+    border: 1px solid #6270DD;
     color: #666;
     transition: all .3s ease;
     display: inline-block;
+    box-shadow: 0 0 5px #6270dd;
 }
 /*  End of header css here====================== */
 /*  home  css here====================== */
@@ -299,10 +299,7 @@ a#scrollUp {
     margin-top: -53%;
     display: block;
    
-}
-.apply-now-content ul .text {
-    
-}
+} 
 .text-1{
     font-size: 21px;
     color: #666;
@@ -359,7 +356,7 @@ color: #fff;
 padding: 0px 5px;
 }
 .footer-content ul {
-   margin-left: -30px;
+   margin-left: 0px;
 }
 .footer-content ul li{
     padding: 5px  0;

@@ -14,7 +14,7 @@
 
     <link rel="manifest" href="site.webmanifest">
 
-    <!-- Icons -->
+    <!-- Icons --> 
     <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
@@ -23,11 +23,8 @@
     <!--Css start here--> 
     <link rel="stylesheet" href="assets/vendors/css/all.css">
     <link rel="stylesheet" href="assets/vendors/css/themify-icons.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-
-    <!--Bootstrap content css-->
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
-    <!--main content css-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> 
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css"> 
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -36,33 +33,32 @@
     <!-- Add your site or application content here -->
 
     <!------------------------header html start here------------------------>
-    <header class="header-area sticky">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
-                <a class="navbar-brand logo" href="index">Healthcare</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <header class="header-area sticky fixed-top bg-light"> 
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand logo" href="#">Healthcare
+                  <!-- <img src="http://placehold.it/150x50?text=Logo" alt=""> -->
+                </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About us </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#how_works">how it works </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login"> log in </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="register" href="registration"> register </a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">How It Works</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="register" href="#">Register</a>
+                </li>
+              </ul>
             </div>
+          </div>
         </nav>
     </header>
 
@@ -300,7 +296,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 offset-lg-1">
+                <div class="col-lg-2">
                     <div class="footer-content">
                         <div class="footer-title">
                             <h4>Sitemap</h4>
@@ -328,15 +324,14 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="footer-content">
                         <div class="footer-title">
                             <h4>Contact Us</h4>
                         </div>
                         <ul>
                             <li><a href="#">
-                                    8254 S. Garfield Street.</a></li>
-                            <li><a href="#"> Grand Island, NE 68801</a></li>
+                                    8254 S. Garfield Street. Grand Island, NE 68801</a></li>
                             <li><a href="#">+123 456 7890</a></li>
                             <li><a href="#">bluebari@gmail.com</a></li>
 
@@ -354,12 +349,10 @@
     <!------------------------footer end here------------------------>
 
 
-    <script src="assets/vendors/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/bootstrap/jquery-3.2.1.slim.min.js"></script>
     <script src="assets/vendors/js/jquery.scrollUp.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
-
+    <script src="assets/bootstrap/popper.min.js"></script>
+    <script src="assets/bootstrap/bootstrap.min.js"></script>  
 
 </body>
 
